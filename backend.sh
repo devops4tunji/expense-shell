@@ -1,7 +1,7 @@
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 dnf install nodejs -y
-cp backend.service /etc/systemd/system/backend.service
+cp backend.service /etc/systemd/system/backend.service  #note: we brought this file upper because evertime i tried to run the command it was always telling me there was no file like that in that directory. so we had to bring it up because of  cd /app which came above it )
 
 useradd expense
 mkdir /app
