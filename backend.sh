@@ -7,7 +7,7 @@ echo copying backendservice to /system/backendservice
 cp backend.service /etc/systemd/system/backend.service >/tmp/expense.log  #note: we brought this file upper because evertime i tried to run the command it was always telling me there was no file like that in that directory. so we had to bring it up because of  cd /app which came above it )
 
 echo removing /app directory
-rm /app >/tmp/expense.log # we added this because there was an error in the download process becasue we have cd/app in the script below
+rm -rf /app >/tmp/expense.log # we added this because there was an error in the download process becasue we have cd/app in the script below
 
 echo adding user expense
 useradd expense >/tmp/expense.log
