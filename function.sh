@@ -4,8 +4,8 @@ abc() {
 #how to access a function
 abc
 
-tunji
-tunji () {
 
+tunji () {
 echo you doing
 }
+tunji
