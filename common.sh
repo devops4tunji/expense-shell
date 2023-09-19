@@ -23,6 +23,7 @@ failure_and_success(){
   echo -e "\e[32msuccess\e[0m"
   else
   echo -e "\e[33mfailure\e[0m"
+  exit
   fi
 }
 # i want to try this as a function and see if it works
