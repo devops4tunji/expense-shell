@@ -22,12 +22,6 @@ failure_and_success
 
 echo changing directory to usr/share/nginx/html
 cd /usr/share/nginx/html &>>$log_file
-#echo $? #using this to see if the command failed or not
-#if [$? -eq 0]; then
-#echo success
-#else
-#echo failure
-#fi
 failure_and_success
 
 download_and_extract
