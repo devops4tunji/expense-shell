@@ -15,4 +15,4 @@ echo setting mysql secure instalation
 mysql_secure_installation --set-root-pass ExpenseApp@1 >>/tmp/expense.log
 
 echo logging in to mysql
-mysql -uroot -pExpenseApp@1 >>/tmp/expense.log
+mysql -uroot mysql.devopsafrican.online -pExpenseApp@1 >>/tmp/expense.log
