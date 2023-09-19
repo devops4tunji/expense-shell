@@ -6,6 +6,7 @@ component2=backend  #because of back.service everywhere , so we substitute it wi
 
 echo downloading rpm
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
+echo $? #this will let me know if it fails or does not fail.
 
 echo installing nodejs
 dnf install nodejs -y &>>$log_file
