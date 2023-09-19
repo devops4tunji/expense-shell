@@ -23,7 +23,8 @@ failure_and_success
 
 
 echo adding user expense or not adding
-if [ id -ne 0 ]; then
+id expense &>>/log_file
+if [ $? -ne 0 ]; then
 useradd expense &>>$log_file
 fi
 failure_and_success
