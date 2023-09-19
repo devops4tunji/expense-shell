@@ -8,7 +8,7 @@ echo removing the /usr/share/nginx/html directory
 rm -rf /usr/share/nginx/html/* >/tmp/expense.log
 
 echo download frontend code
-curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip >/tmp/expense.log
+curl -s -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip >/tmp/expense.log
 
 echo changing directory to usr/share/nginx/html
 cd /usr/share/nginx/html >/tmp/expense.log
