@@ -14,7 +14,7 @@ unzip /tmp/$component.zip >>$log_file
 
 download_and_extract2(){
   echo downloading the artifact for backend.
-  curl -o /tmp/$component2.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>$log_file
+  curl -s-o /tmp/$component2.zip https://expense-artifacts.s3.amazonaws.com/backend.zip >>$log_file
   echo unziping /tmp/$component2.zip file
   unzip /tmp/$component2.zip >>$log_file
 }
