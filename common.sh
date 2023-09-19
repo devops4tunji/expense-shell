@@ -17,3 +17,11 @@ download_and_extract2(){
   echo unziping /tmp/$component2.zip file
   unzip /tmp/$component2.zip &>>$log_file
 }
+
+failure_and_success (){
+  if [$? -eq 0]; then
+  echo success
+  else
+  echo failure
+  fi
+}# i want to try this as a function and see if it works
