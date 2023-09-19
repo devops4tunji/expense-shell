@@ -18,7 +18,7 @@ download_and_extract2(){
   unzip /tmp/$component2.zip &>>$log_file
 }
 
-failure_and_success (){
+failure_and_success(){
   if [$? -eq 0]; then
   echo success
   else

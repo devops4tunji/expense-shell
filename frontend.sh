@@ -8,7 +8,11 @@ source common.sh #this was declared because i put log_file=/tmp/expense.log in t
 echo installing nginx
 dnf install nginx -y &>>$log_file
 #echo $? #using this to see if the command failed or not
-failure_and_success
+if [$? -eq 0]; then
+  echo success
+  else
+  echo failure
+  fi
 
 echo placing expense config file in nginx and redirecting it /tmp/expense.log
 cp expense.conf /etc/nginx/default.d/expense.conf &>>$log_file
