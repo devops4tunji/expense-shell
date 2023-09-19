@@ -19,7 +19,7 @@ download_and_extract2(){
 }
 
 failure_and_success(){
-  if [ $? -eq 0]; then
+  if [ $? -eq 0 ]; then
   echo success
   else
   echo failure

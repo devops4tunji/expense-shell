@@ -8,7 +8,7 @@ source common.sh #this was declared because i put log_file=/tmp/expense.log in t
 echo installing nginx
 dnf install nginx -y &>>$log_file
 #echo $? #using this to see if the command failed or not
-if [$? -eq 0]; then
+if [ $? -eq 0 ]; then
   echo success
   else
   echo failure
