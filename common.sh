@@ -20,9 +20,9 @@ download_and_extract2(){
 
 failure_and_success(){
   if [ $? -eq 0 ]; then
-  echo success
+  echo -e "\e[32msuccess\e[0m"
   else
-  echo failure
+  echo -e "\e[33mfailure\e[0m"
   fi
 }
 # i want to try this as a function and see if it works
