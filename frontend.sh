@@ -1,5 +1,7 @@
 #declaring log_file=/tmp/expense.log as a variable. this will automatically make all the changes to $log_file
-log_file=/tmp/expense.log
+#log_file=/tmp/expense.log
+#log_file=/tmp/expense.log will now be changed to source common.sh reference the common.sh file where all common coades are stored
+source common.sh
 
 echo installing nginx
 dnf install nginx -y >>$log_file

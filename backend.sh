@@ -1,4 +1,7 @@
 #log_file=/tmp/expense.log
+#log_file=/tmp/expense.log will now be changed to source common.sh reference the common.sh file where all common coades are stored
+source common.sh
+
 
 echo downloading rpm
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash >>$log_file

@@ -1,4 +1,7 @@
-log_file=/tmp/expense.log
+#log_file=/tmp/expense.log
+#log_file=/tmp/expense.log
+#log_file=/tmp/expense.log will now be changed to source common.sh reference the common.sh file where all common coades are stored
+source common.sh
 
 echo disabling mysql default instalation package
 dnf module disable mysql -y >>$log_file
