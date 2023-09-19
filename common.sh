@@ -24,4 +24,5 @@ failure_and_success (){
   else
   echo failure
   fi
-}# i want to try this as a function and see if it works
+}
+# i want to try this as a function and see if it works
