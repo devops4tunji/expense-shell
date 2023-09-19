@@ -2,7 +2,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 dnf install nodejs -y
 cp backend.service /etc/systemd/system/backend.service  #note: we brought this file upper because evertime i tried to run the command it was always telling me there was no file like that in that directory. so we had to bring it up because of  cd /app which came above it )
-rm /app
+rm /app # we added this because there was an error in the download process becasue we have cd/app in the script below
 useradd expense
 mkdir /app
 
