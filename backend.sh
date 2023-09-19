@@ -22,8 +22,10 @@ rm -rf /app &>>$log_file
 failure_and_success
 
 
-echo adding user expense
+echo adding user expense or not adding
+if [ id -ne 0 ]; then
 useradd expense &>>$log_file
+fi
 failure_and_success
 
 echo making a directory /app
