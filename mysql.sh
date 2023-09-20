@@ -28,8 +28,10 @@ systemctl start mysqld &>>$log_file
 failure_and_success
 
 echo setting mysql secure instalation
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$log_file
+mysql_root_password=$1
+mysql_secure_installation --set-root-pass mysql_root_password &>>$log_file  #here the password was ExpenseApp@1
 failure_and_success
 
 echo loading schema
+mysql_root_password=$1
 mysql -uroot  -pExpenseApp@1
