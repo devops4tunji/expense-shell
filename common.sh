@@ -7,15 +7,19 @@ log_file=/tmp/expense.log
 download_and_extract() {
 echo download $component code
 curl -s -o /tmp/$component.zip https://expense-artifacts.s3.amazonaws.com/$component.zip &>>$log_file
+failure_and_success
 echo extracting frontend zip file
 unzip /tmp/$component.zip >>$log_file
+failure_and_success
 }
 
 download_and_extract2(){
   echo downloading the artifact for backend.
   curl -s -o /tmp/$component2.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>$log_file
+  failure_and_success
   echo unziping /tmp/$component2.zip file
   unzip /tmp/$component2.zip &>>$log_file
+  failure_and_success
 }
 
 failure_and_success(){
