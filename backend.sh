@@ -61,5 +61,6 @@ dnf install mysql -y &>>$log_file
 failure_and_success
 
 echo logging into mysql
-mysql -h mysql.devopsafrican.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$log_file
+mysql_root_password=$1
+mysql -h mysql.devopsafrican.online -uroot -p$mysql_root_password < /app/schema/backend.sql &>>$log_file
 failure_and_success
