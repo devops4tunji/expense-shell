@@ -5,11 +5,17 @@ component2=backend  #because of back.service everywhere , so we substitute it wi
 #example - cp backend.service /etc/systemd/system/backend.service &>>$log_file
 
 echo downloading rpm
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file
-failure_and_success
+#curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>$log_file ( previous before we used the if command
+#echo installing nodejs ( previous before we used the if command
+#dnf install nodejs -y &>>$log_file
 
-echo installing nodejs
-dnf install nodejs -y &>>$log_file
+type npm &>>$log_file
+if [ $? -ne 0 ]; then
+  echo downloading rpm
+  curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+  echo installing nodejs
+  dnf install nodejs -y &>>$log_file
+fi
 failure_and_success
 
 echo copying backendservice to /system/backendservice
