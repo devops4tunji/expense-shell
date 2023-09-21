@@ -6,7 +6,7 @@ source common.sh #this was declared because i put log_file=/tmp/expense.log in t
 #echo $? #using this to see if the command failed or not
 
 echo installing nginx
-dnf 666install nginx -y &>>$log_file
+dnf install nginx -y &>>$log_file
 #echo $? #using this to see if the command failed or not
 failure_and_success
 
